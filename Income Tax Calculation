@@ -1,0 +1,160 @@
+#include <stdio.h>
+
+void main()
+{
+    printf("Calculation of Total Income Tax Liability with Surcharge and Cess with Rebate Under Section 87a For the Asessment Year:2021-2022\n");
+
+    double Basic_Tax, Surcharge, Cess, Rebate, Total_Tax, Income;
+    // Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+    printf("Enter Your Total Income: \nRs.");
+    scanf("%lf", &Income);
+    // If Total Income is Below Rs. 5,00,000/- then the amount of tax is Exempt Under Setion 87a (i.e.Rebate)
+    if (Income > 250000 && Income <= 500000)
+    {
+        Basic_Tax = (Basic_Tax + 0.05 * (Income - 250000));
+        Surcharge = 0;
+        Cess = 0;
+        Rebate = Basic_Tax - (Basic_Tax + 0.05 * (Income - 250000));
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        // printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        // printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        // printf("Amount of Cess on Basic Tax is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is Exempt Under Setion 87a (i.e.Rebate)\n", Total_Tax);
+    }
+    else if (Income > 500000 && Income <= 750000)
+    {
+        Basic_Tax = (0.10 * (Income - 500000)) + 12500;
+        Surcharge = 0;
+        Cess = 0.04 * Basic_Tax;
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        // printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 750000 && Income <= 1000000)
+    {
+        Basic_Tax = (0.15 * (Income - 750000)) + 37500;
+        Surcharge = 0;
+        Cess = 0.04 * Basic_Tax;
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        // printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 1000000 && Income <= 1250000)
+    {
+        Basic_Tax = (0.20 * (Income - 1000000)) + 75000;
+        Surcharge = 0;
+        Cess = 0.04 * (Basic_Tax + Surcharge);
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        // printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 1250000 && Income <= 1500000)
+    {
+        Basic_Tax = (0.25 * (Income - 1250000)) + 125000;
+        Surcharge = 0;
+        Cess = 0.04 * (Basic_Tax + Surcharge);
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        // printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 1500000 && Income <= 5000000)
+    {
+        Basic_Tax = (0.30 * (Income - 1500000)) + 187500;
+        Surcharge = 0;
+        Cess = 0.04 * (Basic_Tax + Surcharge);
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        // printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 5000000 && Income <= 10000000)
+    {
+        Basic_Tax = (0.30 * (Income - 1500000)) + 187500;
+        Surcharge = 0.10 * Basic_Tax;
+        Cess = 0.04 * (Basic_Tax + Surcharge);
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 10000000 && Income <= 20000000)
+    {
+        Basic_Tax = (0.30 * (Income - 1500000)) + 187500;
+        Surcharge = 0.15 * Basic_Tax;
+        Cess = 0.04 * (Basic_Tax + Surcharge);
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 20000000 && Income <= 50000000)
+    {
+        Basic_Tax = (0.30 * (Income - 1500000)) + 187500;
+        Surcharge = 0.25 * Basic_Tax;
+        Cess = 0.04 * (Basic_Tax + Surcharge);
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 50000000 && Income <= 100000000)
+    {
+        Basic_Tax = (0.30 * (Income - 1500000)) + 187500;
+        Surcharge = 0.37 * Basic_Tax;
+        Cess = 0.04 * (Basic_Tax + Surcharge);
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else if (Income > 100000000)
+    {
+        Basic_Tax = (0.30 * (Income - 1500000)) + 187500;
+        Surcharge = 0.37 * Basic_Tax;
+        Cess = 0.04 * (Basic_Tax + Surcharge);
+        Rebate = 0;
+        Total_Tax = Basic_Tax + Surcharge + Cess - Rebate;
+        printf("Amount of Basic Tax is:Rs.%.2lf\n", Basic_Tax);
+        printf("Amount of Surcharge on Basic Tax is:Rs.%.2lf\n", Surcharge);
+        printf("Amount of Cess on Basic Tax Plus Surcharge is:Rs.%.2lf\n", Cess);
+        // printf("Amount of Rebate on Basic Tax is:Rs.%.2lf\n", Rebate);
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    else
+    {
+        printf("Your Total Income Tax Liability is:Rs.%.2lf\n", Total_Tax);
+    }
+    return;
+}
